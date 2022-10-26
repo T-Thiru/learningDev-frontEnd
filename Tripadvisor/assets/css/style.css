@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .container {
-  max-width: 1024px;
+  max-width: 1140px;
   margin: 0px auto;
   padding: 30px;
 }
@@ -15,8 +15,14 @@ nav > img {
   border: 2px solid gray;
   border-radius: 30px;
   width: 400px;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
 }
 input {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
   border: none;
 }
 .icons:hover {
