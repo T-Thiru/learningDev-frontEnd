@@ -146,8 +146,8 @@
           <a href="">Tout afficher</a>
         </aside>
         <div class="carrouselle-container">
-          <a class="prev" onclick=" var scrollX=-10">&#10094;</a>
-          <a class="next" onclick="var scrollX=10">&#10095;</a>
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
           <div class="carrouselle">
             <div>
               <div class="relative">
@@ -242,4 +242,15 @@
       </div>
     </footer>
   </body>
+  <script>
+    let carrouselle = document.querySelector(".carrouselle");
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    next.addEventListener("click", (e) => {
+      carrouselle.scrollLeft += 100;
+    });
+    prev.addEventListener("click", (e) => {
+      carrouselle.scrollLeft -= 100;
+    });
+  </script>
 </html>
