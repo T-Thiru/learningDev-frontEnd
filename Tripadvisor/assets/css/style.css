@@ -200,6 +200,7 @@ h1 > p {
 .carrouselle-container {
   display: flex;
   overflow: hidden;
+
   flex: 2;
   position: relative;
 }
@@ -214,6 +215,17 @@ h1 > p {
 
   gap: 10px;
   flex-shrink: 0;
+}
+.carrouselle img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  box-sizing: border-box;
+}
+.carrouselle img:hover {
+  transition: 0.3s;
+  opacity: 0.5;
 }
 
 .prev,
@@ -239,18 +251,6 @@ h1 > p {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carrouselle img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  object-position: center;
-  box-sizing: border-box;
-}
-.carrouselle img:hover {
-  transition: 0.3s;
-  opacity: 0.5;
 }
 
 .relative {
