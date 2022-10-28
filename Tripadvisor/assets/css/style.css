@@ -1,6 +1,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 .container {
   max-width: 1140px;
   margin: 0px auto;
@@ -65,6 +68,7 @@ input {
 .icons {
   width: 30px;
   height: 30px;
+  margin: 0 5px;
 }
 .icons:hover {
   border-radius: 50%;
@@ -119,9 +123,8 @@ h1 > p {
 .itmesBox {
   margin: 50px 0px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   flex-shrink: 0;
-  justify-content: space-evenly;
   gap: 5px;
   position: sticky;
   top: 20px;
@@ -129,16 +132,15 @@ h1 > p {
 }
 
 .box {
-  min-width: 0;
   background-color: white;
   border: 1px solid black;
   border-radius: 20px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 13px 12px 17px -1px rgba(0, 0, 0, 0.26);
+  box-shadow: 11px 13px 13px -3px rgba(0, 0, 0, 0.11);
   flex: 1;
-  /* flex-shrink: 0; */
+  box-sizing: border-box;
 }
 .box > p {
   font-style: normal;
@@ -291,7 +293,7 @@ h1 > p {
   position: relative;
 }
 .heart {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   background-image: url(../img/coeur.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -340,6 +342,11 @@ footer {
   body {
     background: rgb(246, 246, 169);
   }
+
+  .container {
+    margin: 0 20px;
+  }
+
   .itmesBox div:nth-child(6) {
     display: flex;
   }
@@ -350,11 +357,9 @@ footer {
     flex-wrap: wrap;
   }
   .box {
-    min-width: 200px;
+    flex: calc(25% - 10px);
   }
-  .images {
-    height: 350px;
-  }
+
   .section1 {
     max-width: 100%;
     max-height: 100%;
@@ -364,10 +369,7 @@ footer {
   body {
     background: rgb(250, 183, 191);
   }
-  .box {
-    min-width: 180px;
-    max-width: 230px;
-  }
+
   .iconsText {
     display: none;
   }
@@ -408,12 +410,17 @@ footer {
     padding: 0;
   }
 
-  .container {
-    max-width: auto;
-  }
   .itmesBox {
+    justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: scroll;
+  }
+  .box p {
+    display: none;
+  }
+  .box {
+    justify-content: center;
+    flex-shrink: 0;
   }
 
   .images .left {
@@ -438,5 +445,15 @@ footer {
   }
   .images:hover {
     opacity: 0.5;
+  }
+  .aside1 {
+    display: none;
+  }
+  .carrouselle {
+    width: 100vw;
+  }
+  .relative img {
+    width: calc(100vw - 40px);
+    box-sizing: border-box;
   }
 }
